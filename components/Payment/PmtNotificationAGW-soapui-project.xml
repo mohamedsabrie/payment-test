@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="13998395-42c0-4572-8ff2-2d84551d5cbd" activeEnvironment="Default" name="PmtNotificationAGW" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ac9bad82-32da-4e29-bb1e-355f8d4d07d5" wsaVersion="NONE" name="BasicHttpsBinding_IPmtNotificationAGW" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpsBinding_IPmtNotificationAGW" soapVersion="1_1" anonymous="optional" definition="http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl"><con:part><con:url>http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="PmtNotificationAGW" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="https://www.ecp.mof.gov.sa/agw" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IPmtNotificationAGW_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:AsymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:InitiatorToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                  <wsp:Policy>
+                    <sp:RequireDerivedKeys/>
+                    <sp:WssX509V3Token10/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:InitiatorToken>
+            <sp:RecipientToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                  <wsp:Policy>
+                    <sp:WssX509V3Token10/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:RecipientToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+            <sp:OnlySignEntireHeadersAndBody/>
+          </wsp:Policy>
+        </sp:AsymmetricBinding>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportRefKeyIdentifier/>
+            <sp:MustSupportRefIssuerSerial/>
+            <sp:MustSupportRefThumbprint/>
+            <sp:RequireSignatureConfirmation/>
+          </wsp:Policy>
+        </sp:Wss11>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens/>
+            <sp:RequireClientEntropy/>
+            <sp:RequireServerEntropy/>
+          </wsp:Policy>
+        </sp:Trust10>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="true"/>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IPmtNotificationAGW_PushNotification_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IPmtNotificationAGW_PushNotification_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="https://www.ecp.mof.gov.sa/agw" location="http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpsBinding_IPmtNotificationAGW" type="i0:IPmtNotificationAGW">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_IPmtNotificationAGW_policy"/>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="PushNotification">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="PmtNotificationAGWRequest">
+        <wsp:PolicyReference URI="#BasicHttpsBinding_IPmtNotificationAGW_PushNotification_Input_policy"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="PmtNotificationAGWResponse">
+        <wsp:PolicyReference URI="#BasicHttpsBinding_IPmtNotificationAGW_PushNotification_output_policy"/>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PmtNotificationAGW">
+    <wsdl:port name="BasicHttpsBinding_IPmtNotificationAGW" binding="tns:BasicHttpsBinding_IPmtNotificationAGW">
+      <soap:address location="https://localhost:811/PaymentNotification/PmtNotificationAGW.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="https://www.ecp.mof.gov.sa/agw" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://www.ecp.mof.gov.sa/agw" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://www.ecp.mof.gov.sa/agw/Imports">
+      <xsd:import schemaLocation="http://10.80.120.240:810/PmtNotificationAGW.svc?xsd=xsd0" namespace="https://www.ecp.mof.gov.sa/agw"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="PmtNotificationAGWRequest">
+    <wsdl:part name="PmtNotificationAGWRq" element="tns:PmtNotificationAGWRq"/>
+  </wsdl:message>
+  <wsdl:message name="PmtNotificationAGWResponse">
+    <wsdl:part name="PmtNotificationAGWRs" element="tns:PmtNotificationAGWRs"/>
+  </wsdl:message>
+  <wsdl:portType name="IPmtNotificationAGW">
+    <wsdl:operation name="PushNotification">
+      <wsdl:input wsaw:Action="" name="PmtNotificationAGWRequest" message="tns:PmtNotificationAGWRequest"/>
+      <wsdl:output wsaw:Action="https://www.ecp.mof.gov.sa/agw/IPmtNotificationAGW/PmtNotificationAGWResponse" name="PmtNotificationAGWResponse" message="tns:PmtNotificationAGWResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://10.80.120.240:810/PmtNotificationAGW.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="https://www.ecp.mof.gov.sa/agw" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://www.ecp.mof.gov.sa/agw">
+  <xs:element name="PmtNotificationAGWRq" type="tns:PmtNotificationAGWRq_Type"/>
+  <xs:complexType name="PmtNotificationAGWRq_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="MsgRqHdr" type="tns:MsgRqHdr_Type"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="Body" type="tns:PmtNotificationAGWRqBody_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MsgRqHdr_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="RqUID" type="xs:string"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="SCId" type="tns:SCId_Type"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="FuncId" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PartnerInfo" type="tns:PartnerInfo_Type"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="RqMode" type="xs:long"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PartyId" type="tns:PartyId_Type"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="UserId" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="ProxyUserId" type="xs:string"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="ClientDt" type="xs:dateTime"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="EchoData" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="Version" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="SCId_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="G2G"/>
+      <xs:enumeration value="ECLLCTN"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PartnerInfo_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="PartnerId" type="xs:string"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="PartnerType" type="tns:PartnerType_Type"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PartnerCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PartnerType_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GOVT"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PartyId_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="PartyIdNum" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PartyIdType" type="tns:PartyIdType_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PartyIdType_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IqamaNumber"/>
+      <xs:enumeration value="NationalId"/>
+      <xs:enumeration value="CommercialRegistration"/>
+      <xs:enumeration value="700Code"/>
+      <xs:enumeration value="AccountNumber"/>
+      <xs:enumeration value="FamilyCardNumber"/>
+      <xs:enumeration value="BorderNumber"/>
+      <xs:enumeration value="PassportNumber"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PmtNotificationAGWRqBody_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="PmtList" type="tns:ArrayOfPmtInfo_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfPmtInfo_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PmtInfo" type="tns:PmtInfo_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PmtInfo_Type">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PmtRec_Type"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PmtRec_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="AgencyId" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="BillerPmtId" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="AgencyPmtId" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="eCollectionPmtId" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="BillNum" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="BillAcct" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="BillCategory" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="BillCycle" type="xs:string"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="PmtAmt" type="xs:decimal"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PmtDt" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PmtCollectDt" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PmtMethod" type="tns:PmtMethod_Type"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="eCollectionPmtMethod" type="tns:eCollectionPmtMethod_Type"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="eCollectionPmtMethodReconDt" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="eCollectionPmtMethodDtls" type="tns:eCollectionPmtMethodDtls_Type"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PmtStatusCode" type="tns:PmtStatusCode_Type"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PmtRefInfo" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PayorPOI" type="tns:POI_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PmtMethod_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CASH"/>
+      <xs:enumeration value="CHEQUE"/>
+      <xs:enumeration value="TRANSFER"/>
+      <xs:enumeration value="POS"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="eCollectionPmtMethod_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SADAD"/>
+      <xs:enumeration value="EFT"/>
+      <xs:enumeration value="CCARD"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="eCollectionPmtMethodDtls_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="PmtId" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="BankId" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="BankPmtId" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PmtChannel" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PmtStatusCode_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Succeeded"/>
+      <xs:enumeration value="Reversed"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="POI_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="POINum" type="xs:string"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="POIType" type="tns:POIType_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="POIType_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NAT"/>
+      <xs:enumeration value="IQA"/>
+      <xs:enumeration value="BIS"/>
+      <xs:enumeration value="UOI"/>
+      <xs:enumeration value="C700"/>
+      <xs:enumeration value="GCC"/>
+      <xs:enumeration value="PAS"/>
+      <xs:enumeration value="BDN"/>
+      <xs:enumeration value="FCN"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PmtNotificationAGWRs" type="tns:PmtNotificationAGWRs_Type"/>
+  <xs:complexType name="PmtNotificationAGWRs_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="MsgRsHdr" type="tns:MsgRsHdr_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MsgRsHdr_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="RqUID" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="SPRefNum" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="MsgRecDt" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="Status" type="tns:Status_Type"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="EchoData" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Status_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="StatusCode" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="StatusDesc" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://10.80.120240:811/PaymentNotification/PmtNotificationAGW.svc</con:endpoint><con:endpoint>https://localhost:811/PaymentNotification/PmtNotificationAGW.svc</con:endpoint></con:endpoints><con:operation id="6ca5c6b0-6cac-4c25-8609-6e896fe71d88" isOneWay="false" action="" name="PushNotification" bindingOperationName="PushNotification" type="Request-Response" outputName="PmtNotificationAGWResponse" inputName="PmtNotificationAGWRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cbb95e45-c070-45f8-bc79-22b7a733f20b" name="Request 1" sslKeystore="NewTahseelTest.pfx" outgoingWss="out"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@skip_soap_action">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@strip-whitespaces">true</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://10.80.120.240:5700/PmtNotificationAGW</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:agw="https://www.ecp.mof.gov.sa/agw" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body wsu:Id="id-3EE7835C8B3F6A892916235896301933821" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+      <agw:PmtNotificationAGWRq>\r
+         <agw:MsgRqHdr>\r
+            <agw:RqUID>${=java.util.UUID.randomUUID()}</agw:RqUID>\r
+            <agw:SCId>G2G</agw:SCId>\r
+            <agw:FuncId>14560000</agw:FuncId>\r
+            <agw:PartnerInfo>\r
+               <agw:PartnerId>019000000000000000</agw:PartnerId>\r
+               <agw:PartnerType>GOVT</agw:PartnerType>\r
+            </agw:PartnerInfo>\r
+            <agw:ClientDt>2021-09-19T15:22:08</agw:ClientDt>\r
+         </agw:MsgRqHdr>\r
+         <agw:Body>\r
+            <agw:PmtList>\r
+               <agw:PmtInfo>\r
+                  <agw:AgencyId>019000000000000000</agw:AgencyId>\r
+                  <agw:eCollectionPmtId>MMRA2021091914070500006087652</agw:eCollectionPmtId>\r
+                  <agw:BillAcct>23302728093</agw:BillAcct>\r
+                  <agw:BillCategory>OneTime</agw:BillCategory>\r
+                  <agw:PmtAmt>100.00</agw:PmtAmt>\r
+                  <agw:PmtDt>${=def now = new Date();now.format("yyyy-MM-dd")}</agw:PmtDt>\r
+                  <agw:eCollectionPmtMethod>SADAD</agw:eCollectionPmtMethod>\r
+                  <agw:eCollectionPmtMethodDtls>\r
+                     <agw:PmtId>050076997476</agw:PmtId>\r
+                     <agw:BankId>RJHISARI</agw:BankId>\r
+                     <agw:BankPmtId>2000069775120000397751</agw:BankPmtId>\r
+                     <agw:PmtChannel>INTERNET</agw:PmtChannel>\r
+                  </agw:eCollectionPmtMethodDtls>\r
+                  <agw:PmtStatusCode>Succeeded</agw:PmtStatusCode>
+                  <agw:PayorPOI>\r
+                     <agw:POINum>1075135473</agw:POINum>\r
+                     <agw:POIType>NAT</agw:POIType>\r
+                  </agw:PayorPOI>\r
+               </agw:PmtInfo>\r
+            </agw:PmtList>\r
+         </agw:Body>\r
+      </agw:PmtNotificationAGWRq>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username/><con:password/><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer><con:crypto><con:source>D:/elkholy/NewTahseelTest.pfx</con:source><con:password>123456</con:password><con:type>KEYSTORE</con:type></con:crypto><con:outgoing><con:name>out</con:name><con:entry type="Timestamp"><con:configuration><timeToLive>60</timeToLive><strictTimestamp>true</strictTimestamp></con:configuration></con:entry><con:entry type="Signature" username="te-31e31ca4-c43d-423a-992c-6b86d325cb3e" password="123456"><con:configuration><crypto>NewTahseelTest.pfx</crypto><keyIdentifierType>1</keyIdentifierType><signatureAlgorithm/><signatureCanonicalization/><useSingleCert>true</useSingleCert><prependSignature>false</prependSignature><digestAlgorithm/><customTokenValueType/><customTokenId/><signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="Timestamp"/>
+  <con:entry key="namespace" value="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+  <con:entry key="id" value=""/>
+  <con:entry key="enc" value="Content"/>
+</xml-fragment>]]></signaturePart><signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="Body"/>
+  <con:entry key="namespace" value="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <con:entry key="id" value=""/>
+  <con:entry key="enc" value="Element"/>
+</xml-fragment>]]></signaturePart></con:configuration></con:entry></con:outgoing></con:wssContainer><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

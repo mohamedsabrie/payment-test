@@ -1,7 +1,7 @@
 import React from "react";
 import exportFromJSON from "export-from-json";
 
-export default function CSVDownloader() {
+export default function ExportCSV() {
   const handleExport = () => {
     const data = [
       { name: "Ahmed", age: 26, company: "Alex" },
