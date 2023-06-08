@@ -1,16 +1,19 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+
 function Payment() {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
-
+    setLoading(true);
     axios
       .get("http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl", {
         headers: {
@@ -24,8 +27,12 @@ function Payment() {
         console.log(res);
       })
       .catch((err) => {
+        toast("Something wrong happened", {
+          type: "error",
+        });
         console.log(err);
-      });
+      })
+      .finally(() => setLoading(false));
   });
   return (
     <form
@@ -53,8 +60,11 @@ function Payment() {
           })}
         />
       </div>
-      <button className="bg-green-500 px-5 py-2 rounded-md text-white mt-3">
-        Run
+      <button
+        disabled={loading}
+        className="bg-green-500 px-5 py-2 rounded-md text-white mt-3"
+      >
+        {loading ? "Sending ...." : "Run"} 
       </button>
     </form>
   );
