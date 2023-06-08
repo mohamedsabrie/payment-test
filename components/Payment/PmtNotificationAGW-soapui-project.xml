@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="13998395-42c0-4572-8ff2-2d84551d5cbd" activeEnvironment="Default" name="PmtNotificationAGW" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ac9bad82-32da-4e29-bb1e-355f8d4d07d5" wsaVersion="NONE" name="BasicHttpsBinding_IPmtNotificationAGW" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpsBinding_IPmtNotificationAGW" soapVersion="1_1" anonymous="optional" definition="http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl"><con:part><con:url>http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="PmtNotificationAGW" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="https://www.ecp.mof.gov.sa/agw" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+<con:soapui-project id="13998395-42c0-4572-8ff2-2d84551d5cbd" activeEnvironment="Default"
+  name="PmtNotificationAGW" resourceRoot="" soapui-version="5.7.0" abortOnError="false"
+  runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings />
+  <con:interface xsi:type="con:WsdlInterface" id="ac9bad82-32da-4e29-bb1e-355f8d4d07d5"
+    wsaVersion="NONE" name="BasicHttpsBinding_IPmtNotificationAGW" type="wsdl"
+    bindingName="{http://tempuri.org/}BasicHttpsBinding_IPmtNotificationAGW" soapVersion="1_1"
+    anonymous="optional" definition="http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings />
+    <con:definitionCache type="TEXT" rootPart="http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl">
+      <con:part>
+        <con:url>http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="PmtNotificationAGW" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="https://www.ecp.mof.gov.sa/agw" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
   <wsp:Policy wsu:Id="BasicHttpsBinding_IPmtNotificationAGW_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -116,7 +129,12 @@
       <soap:address location="https://localhost:811/PaymentNotification/PmtNotificationAGW.svc"/>
     </wsdl:port>
   </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="https://www.ecp.mof.gov.sa/agw" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://www.ecp.mof.gov.sa/agw" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+      <con:part>
+        <con:url>http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl=wsdl0</con:url>
+        <con:content><![CDATA[<wsdl:definitions targetNamespace="https://www.ecp.mof.gov.sa/agw" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://www.ecp.mof.gov.sa/agw" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
   <wsdl:types>
     <xsd:schema targetNamespace="https://www.ecp.mof.gov.sa/agw/Imports">
       <xsd:import schemaLocation="http://10.80.120.240:810/PmtNotificationAGW.svc?xsd=xsd0" namespace="https://www.ecp.mof.gov.sa/agw"/>
@@ -134,7 +152,12 @@
       <wsdl:output wsaw:Action="https://www.ecp.mof.gov.sa/agw/IPmtNotificationAGW/PmtNotificationAGWResponse" name="PmtNotificationAGWResponse" message="tns:PmtNotificationAGWResponse"/>
     </wsdl:operation>
   </wsdl:portType>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://10.80.120.240:810/PmtNotificationAGW.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="https://www.ecp.mof.gov.sa/agw" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://www.ecp.mof.gov.sa/agw">
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+      <con:part>
+        <con:url>http://10.80.120.240:810/PmtNotificationAGW.svc?xsd=xsd0</con:url>
+        <con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="https://www.ecp.mof.gov.sa/agw" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://www.ecp.mof.gov.sa/agw">
   <xs:element name="PmtNotificationAGWRq" type="tns:PmtNotificationAGWRq_Type"/>
   <xs:complexType name="PmtNotificationAGWRq_Type">
     <xs:sequence>
@@ -299,7 +322,32 @@
       <xs:element minOccurs="0" maxOccurs="1" name="StatusDesc" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://10.80.120240:811/PaymentNotification/PmtNotificationAGW.svc</con:endpoint><con:endpoint>https://localhost:811/PaymentNotification/PmtNotificationAGW.svc</con:endpoint></con:endpoints><con:operation id="6ca5c6b0-6cac-4c25-8609-6e896fe71d88" isOneWay="false" action="" name="PushNotification" bindingOperationName="PushNotification" type="Request-Response" outputName="PmtNotificationAGWResponse" inputName="PmtNotificationAGWRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cbb95e45-c070-45f8-bc79-22b7a733f20b" name="Request 1" sslKeystore="NewTahseelTest.pfx" outgoingWss="out"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@skip_soap_action">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@strip-whitespaces">true</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://10.80.120.240:5700/PmtNotificationAGW</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:agw="https://www.ecp.mof.gov.sa/agw" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+</xs:schema>]]></con:content>
+        <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://10.80.120240:811/PaymentNotification/PmtNotificationAGW.svc</con:endpoint>
+      <con:endpoint>https://localhost:811/PaymentNotification/PmtNotificationAGW.svc</con:endpoint>
+    </con:endpoints>
+    <con:operation id="6ca5c6b0-6cac-4c25-8609-6e896fe71d88" isOneWay="false" action=""
+      name="PushNotification" bindingOperationName="PushNotification" type="Request-Response"
+      outputName="PmtNotificationAGWResponse" inputName="PmtNotificationAGWRequest"
+      receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings />
+      <con:call id="cbb95e45-c070-45f8-bc79-22b7a733f20b" name="Request 1"
+        sslKeystore="NewTahseelTest.pfx" outgoingWss="out">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">
+            &lt;xml-fragment/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@skip_soap_action">false</con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@strip-whitespaces">true</con:setting>
+          <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">
+            true</con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://10.80.120.240:5700/PmtNotificationAGW</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:agw="https://www.ecp.mof.gov.sa/agw" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
    <soapenv:Header/>\r
    <soapenv:Body wsu:Id="id-3EE7835C8B3F6A892916235896301933821" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
       <agw:PmtNotificationAGWRq>\r
@@ -339,14 +387,67 @@
          </agw:Body>\r
       </agw:PmtNotificationAGWRq>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:username/><con:password/><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer><con:crypto><con:source>D:/elkholy/NewTahseelTest.pfx</con:source><con:password>123456</con:password><con:type>KEYSTORE</con:type></con:crypto><con:outgoing><con:name>out</con:name><con:entry type="Timestamp"><con:configuration><timeToLive>60</timeToLive><strictTimestamp>true</strictTimestamp></con:configuration></con:entry><con:entry type="Signature" username="te-31e31ca4-c43d-423a-992c-6b86d325cb3e" password="123456"><con:configuration><crypto>NewTahseelTest.pfx</crypto><keyIdentifierType>1</keyIdentifierType><signatureAlgorithm/><signatureCanonicalization/><useSingleCert>true</useSingleCert><prependSignature>false</prependSignature><digestAlgorithm/><customTokenValueType/><customTokenId/><signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:username />
+          <con:password />
+          <con:domain />
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:preemptive>true</con:preemptive>
+          <con:authType>Preemptive</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT" />
+        <con:jmsPropertyConfig />
+        <con:wsaConfig mustUnderstand="NONE" version="200508" />
+        <con:wsrmConfig version="1.2" />
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:properties />
+  <con:wssContainer>
+    <con:crypto>
+      <con:source>D:/elkholy/NewTahseelTest.pfx</con:source>
+      <con:password>123456</con:password>
+      <con:type>KEYSTORE</con:type>
+    </con:crypto>
+    <con:outgoing>
+      <con:name>out</con:name>
+      <con:entry type="Timestamp">
+        <con:configuration>
+          <timeToLive>60</timeToLive>
+          <strictTimestamp>true</strictTimestamp>
+        </con:configuration>
+      </con:entry>
+      <con:entry type="Signature" username="te-31e31ca4-c43d-423a-992c-6b86d325cb3e"
+        password="123456">
+        <con:configuration>
+          <crypto>NewTahseelTest.pfx</crypto>
+          <keyIdentifierType>1</keyIdentifierType>
+          <signatureAlgorithm />
+          <signatureCanonicalization />
+          <useSingleCert>true</useSingleCert>
+          <prependSignature>false</prependSignature>
+          <digestAlgorithm />
+          <customTokenValueType />
+          <customTokenId />
+          <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="name" value="Timestamp"/>
   <con:entry key="namespace" value="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
   <con:entry key="id" value=""/>
   <con:entry key="enc" value="Content"/>
-</xml-fragment>]]></signaturePart><signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+</xml-fragment>]]></signaturePart>
+          <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="name" value="Body"/>
   <con:entry key="namespace" value="http://schemas.xmlsoap.org/soap/envelope/"/>
   <con:entry key="id" value=""/>
   <con:entry key="enc" value="Element"/>
-</xml-fragment>]]></signaturePart></con:configuration></con:entry></con:outgoing></con:wssContainer><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</xml-fragment>]]></signaturePart>
+        </con:configuration>
+      </con:entry>
+    </con:outgoing>
+  </con:wssContainer>
+  <con:oAuth2ProfileContainer />
+  <con:oAuth1ProfileContainer />
+  <con:sensitiveInformation />
+</con:soapui-project>

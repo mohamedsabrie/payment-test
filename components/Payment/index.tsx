@@ -1,7 +1,6 @@
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
-// import xml_data from './xml'
 function Payment() {
   const {
     register,
@@ -12,18 +11,21 @@ function Payment() {
   const onSubmit = handleSubmit((data) => {
     console.log(data);
 
-    // let xmls =xml_data;
-
-    // axios
-    //   .post("http://www.webservicex.com/CurrencyConvertor.asmx?wsdl", xmls, {
-    //     headers: { "Content-Type": "text/xml" },
-    //   })
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    axios
+      .get("http://10.80.120.240:810/PmtNotificationAGW.svc?wsdl", {
+        headers: {
+          "Content-Type": "text/xml;charset=UTF-8",
+          SOAPAction:
+            "http://tempuri.org/BasicHttpsBinding_IPmtNotificationAGW",
+          "Accept-Encoding": "gzip, deflate, br",
+        },
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   });
   return (
     <form
